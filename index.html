@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Malingue Inc.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 60px; }
-    h1 { font-size: 2.5em; margin-bottom: 0.5em; }
-    p { max-width: 600px; margin: auto; }
-    a { color: #007AFF; text-decoration: none; }
+    body { font-family: sans-serif; margin: 0; padding: 0; text-align: center; }
+    header, footer { background: #fff; padding: 1rem 2rem; border-bottom: 1px solid #eee; }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: bold; font-size: 1.2rem; }
+    ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; }
+    ul li a { text-decoration: none; color: #333; }
+    ul li a:hover { color: #007AFF; }
+    main { padding: 60px 20px; max-width: 800px; margin: auto; }
+    footer { font-size: 0.9rem; border-top: 1px solid #eee; margin-top: 60px; }
   </style>
 </head>
 <body>
-    <header>
-  <nav style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: white; border-bottom: 1px solid #eee;">
-    <div class="logo" style="font-weight: bold; font-size: 1.2rem;">
-      <a href="/" style="text-decoration: none; color: #000;">Malingue Inc.</a>
-    </div>
-    <ul style="display: flex; list-style: none; gap: 1.5rem; margin: 0;">
-      <li><a href="/" style="text-decoration: none; color: #333;">Home</a></li>
-      <li><a href="/about" style="text-decoration: none; color: #333;">About</a></li>
-      <li><a href="/ventures" style="text-decoration: none; color: #333;">Ventures</a></li>
-      <li><a href="/services" style="text-decoration: none; color: #333;">Services</a></li>
-      <li><a href="/portfolio" style="text-decoration: none; color: #333;">Portfolio</a></li>
-      <li><a href="/press" style="text-decoration: none; color: #333;">Press</a></li>
-      <li><a href="/contact" style="text-decoration: none; color: #333;">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-  <h1>Welcome to Malingue Inc.</h1>
-  <p>Malingue Inc. is a technology and design innovation company founded by Danielle Malingue-Essomo. We are currently in the process of developing exciting digital tools and services that improve executive function and daily life for the modern creator.</p>
-  <p>📬 Contact us: <a href="mailto:hello@malingueinc.com">hello@malingueinc.com</a></p>
-  <p>🌐 Learn more soon at <strong>www.malingueinc.com</strong></p>
-  <footer style="margin-top: 60px;">
+  <header>
+    <nav>
+      <div class="logo"><a href="index.html" style="text-decoration: none; color: #000;">Malingue Inc.</a></div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ventures.html">Ventures</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Welcome to Malingue Inc.</h1>
+    <p>Malingue Inc. is a technology and design innovation company founded by Danielle Malingue-Essomo. We are currently developing digital tools and creative services that improve executive function and modern creative workflows.</p>
+    <p>📬 Contact us: <a href="mailto:hello@malingueinc.com">hello@malingueinc.com</a></p>
+    <p>🌐 Learn more soon at <strong>www.malingueinc.com</strong></p>
+  </main>
+
+  <footer>
     &copy; 2025 Malingue Inc. All rights reserved.
   </footer>
 </body>
