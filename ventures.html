@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ventures — Malingue Inc.</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Page-scoped styles */
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+    .breadcrumb { font-size: 0.95rem; color: #666; margin-bottom: 8px; }
+    .headline { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    .subhead { margin: 0 0 28px; color: #444; max-width: 70ch; }
+
+    .section-title { margin: 40px 0 14px; font-size: 1.15rem; letter-spacing: .02em; text-transform: uppercase; color: #222; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 18px;
+      background: #fff;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+    .card h3 { margin: 0 0 8px; font-size: 1.25rem; }
+    .card p { margin: 0 0 12px; color: #444; }
+    .meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+    .tag {
+      font-size: .75rem; line-height: 1; padding: 6px 8px; border-radius: 999px;
+      border: 1px solid #ddd; background: #fafafa; color: #333;
+    }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 10px 12px; border-radius: 10px; border: 1px solid #111;
+      text-decoration: none; font-size: .95rem;
+    }
+    .btn.primary { background:#111; color:#fff; }
+    .btn.ghost { background:#fff; color:#111; }
+    .divider { height: 1px; background: #eee; margin: 32px 0; }
+
+    /* Simple top nav (keep if you don’t already include a shared header) */
+    header.site {
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 16px 20px; border-bottom:1px solid #eee;
+    }
+    .brand { font-weight: 700; }
+    nav a {
+      text-decoration:none; color:#111; margin-left:18px; font-size:.95rem;
+    }
+    nav a[aria-current="page"] { text-decoration: underline; }
+    footer.site { border-top:1px solid #eee; padding: 20px; text-align:center; color:#666; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <!-- If you already have a shared header, replace this block with your include/fragment -->
+  <header class="site">
+    <a class="brand" href="index.html">Malingue Inc.</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="ventures.html" aria-current="page">Ventures</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Portfolio</a>
+      <a href="about.html">eeesww</a>
+    </nav>
+  </header>
+
+  <main class="page-wrap">
+    <p class="breadcrumb">Home / Ventures</p>
+    <h1 class="headline">Ventures</h1>
+    <p class="subhead">
+      We build tools that improve executive function, decision-making, and everyday workflows.
+      Below are active products and explorations currently in development.
+    </p>
+
+    <h2 class="section-title">Active</h2>
+    <section class="grid">
+      <!-- Addison -->
+      <article class="card">
+        <h3>Addison</h3>
+        <div class="meta">
+          <span class="tag">Executive Function</span>
+          <span class="tag">Mobile</span>
+          <span class="tag">Pre-Seed</span>
+        </div>
+        <p>
+          An executive-function toolkit that helps people with ADHD prioritize,
+          decide, and move one task at a time—without overwhelm.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#" aria-label="Learn more about Addison">Learn more</a>
+          <a class="btn ghost" href="mailto:hello@malingueinc.com?subject=Addison%20Partnership">Partner</a>
+        </div>
+      </article>
+
+      <!-- Gigi -->
+      <article class="card">
+        <h3>Gigi</h3>
+        <div class="meta">
+          <span class="tag">Dating CRM</span>
+          <span class="tag">Twilio</span>
+          <span class="tag">Prototype</span>
+        </div>
+        <p>
+          A personal “dating referee” that gives each user a masked number,
+          tracks milestones, and helps enforce boundaries with calm, clear rules.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#" aria-label="Learn more about Gigi">Learn more</a>
+          <a class="btn ghost" href="mailto:hello@malingueinc.com?subject=Gigi%20Beta">Join beta</a>
+        </div>
+      </article>
+
+      <!-- LoanBall -->
+      <article class="card">
+        <h3>LoanBall</h3>
+        <div class="meta">
+          <span class="tag">Financial Literacy</span>
+          <span class="tag">Game</span>
+          <span class="tag">In Build</span>
+        </div>
+        <p>
+          A boredom-core money game where you grind, take loans, and invest in
+          timed opportunities—learning interest, risk, and amortization by feel.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#" aria-label="Learn more about LoanBall">See concept</a>
+          <a class="btn ghost" href="mailto:hello@malingueinc.com?subject=LoanBall%20Feedback">Give feedback</a>
+        </div>
+      </article>
+    </section>
+
+    <div class="divider"></div>
+
+    <h2 class="section-title">Explorations & R&amp;D</h2>
+    <section class="grid">
+      <!-- Cree -->
+      <article class="card">
+        <h3>Cree</h3>
+        <div class="meta">
+          <span class="tag">Fashion</span>
+          <span class="tag">Editorial</span>
+          <span class="tag">Studio</span>
+        </div>
+        <p>
+          A creative lab exploring garments, materials reuse, and brand stories
+          that move culture.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#" aria-label="See Cree work">View lookbook</a>
+          <a class="btn ghost" href="mailto:hello@malingueinc.com?subject=Cree%20Collaboration">Collaborate</a>
+        </div>
+      </article>
+
+      <!-- Malingue Labs -->
+      <article class="card">
+        <h3>Malingue Labs</h3>
+        <div class="meta">
+          <span class="tag">R&amp;D</span>
+          <span class="tag">Wearables</span>
+          <span class="tag">Concept</span>
+        </div>
+        <p>
+          Experiments at the edge of behavior change: biometrics, gentle haptics,
+          and interfaces that nudge without nagging.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#" aria-label="Read about Malingue Labs">Read notes</a>
+          <a class="btn ghost" href="mailto:hello@malingueinc.com?subject=Labs%20Inquiry">Contact</a>
+        </div>
+      </article>
+    </section>
+
+    <div class="divider"></div>
+
+    <p class="subhead">
+      Interested in partnering, investing, or piloting any of these?
+      Email <a href="mailto:hello@malingueinc.com">hello@malingueinc.com</a>.
+    </p>
+  </main>
+
+  <footer class="site">
+    © 2025 Malingue Inc. All rights reserved.
+  </footer>
+</body>
+</html>
