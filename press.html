@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Press — Malingue Inc.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .press-assets {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .asset-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      background: var(--white);
+    }
+    .asset-card .asset-icon { font-size: 1.25rem; margin-bottom: 12px; }
+    .asset-card h3 { font-size: 0.95rem; margin-bottom: 6px; }
+    .asset-card p { font-size: 0.825rem; margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="wrap">
+      <a class="nav-brand" href="index.html">Malingue Inc.</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ventures.html" class="hide-mobile">Products</a></li>
+        <li><a href="consulting.html" class="hide-mobile">Consulting</a></li>
+        <li><a href="investor-relations.html">Investors</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <div class="wrap">
+        <div class="label">Press</div>
+        <h1>Press &amp; media.</h1>
+        <p class="lead">
+          For press inquiries, interviews, or media assets, contact us directly.
+          We respond to all press requests within 24 hours.
+        </p>
+      </div>
+    </div>
+
+    <div class="wrap" style="padding-bottom: 80px;">
+      <div class="section-heading">
+        <div class="label">Press kit</div>
+      </div>
+      <div class="press-assets">
+        <div class="asset-card">
+          <div class="asset-icon">📝</div>
+          <h3>Company boilerplate</h3>
+          <p>Short and long-form company descriptions for press use.</p>
+          <a class="btn btn-ghost" href="mailto:hello@malingueinc.com?subject=Press%20Kit%20Request">Request</a>
+        </div>
+        <div class="asset-card">
+          <div class="asset-icon">🖼</div>
+          <h3>Logo &amp; brand assets</h3>
+          <p>High-resolution logos and brand guidelines.</p>
+          <a class="btn btn-ghost" href="mailto:hello@malingueinc.com?subject=Brand%20Assets%20Request">Request</a>
+        </div>
+        <div class="asset-card">
+          <div class="asset-icon">👤</div>
+          <h3>Founder bio &amp; photo</h3>
+          <p>Official biography and headshots of Danielle Malingue-Essomo.</p>
+          <a class="btn btn-ghost" href="mailto:hello@malingueinc.com?subject=Founder%20Bio%20Request">Request</a>
+        </div>
+        <div class="asset-card">
+          <div class="asset-icon">📬</div>
+          <h3>Press contact</h3>
+          <p>All media inquiries welcome. We're available for interviews and commentary.</p>
+          <a class="btn btn-primary" href="mailto:hello@malingueinc.com?subject=Press%20Inquiry">Email us</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="footer-brand">Malingue Inc.</span>
+      <ul class="footer-links">
+        <li><a href="ventures.html">Products</a></li>
+        <li><a href="consulting.html">Consulting</a></li>
+        <li><a href="investor-relations.html">Investors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <span class="footer-copy">&copy; 2025 Malingue Inc.</span>
+    </div>
+  </footer>
+
+</body>
+</html>

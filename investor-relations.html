@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investor Relations — Malingue Inc.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Sections ── */
+    .ir-section { padding: 64px 0; border-bottom: 1px solid var(--rule); }
+    .ir-section:last-child { border-bottom: none; }
+
+    /* ── Overview table ── */
+    .data-table { width: 100%; border-collapse: collapse; }
+    .data-table tr { border-bottom: 1px solid var(--rule); }
+    .data-table tr:first-child { border-top: 1px solid var(--rule); }
+    .data-table td {
+      padding: 18px 0;
+      font-size: 0.875rem;
+      vertical-align: top;
+    }
+    .data-table td.key {
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      width: 30%;
+      padding-right: 32px;
+      padding-top: 20px;
+    }
+    .data-table td.val { color: var(--black); }
+
+    /* ── Two-col layout ── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 88px; align-items: start; }
+    .two-col-wide { display: grid; grid-template-columns: 2fr 1fr; gap: 88px; align-items: start; }
+
+    /* ── Section headline ── */
+    .ir-headline {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin-bottom: 24px;
+    }
+    .ir-body {
+      font-size: 0.925rem;
+      color: var(--mid);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    /* ── Products table ── */
+    .products-table { width: 100%; border-collapse: collapse; }
+    .products-table thead tr { border-bottom: 1px solid var(--rule); }
+    .products-table th {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 0 0 16px;
+      text-align: left;
+    }
+    .products-table th:not(:first-child) { padding-left: 24px; }
+    .products-table tbody tr { border-bottom: 1px solid var(--rule); }
+    .products-table tbody tr:last-child { border-bottom: none; }
+    .products-table td {
+      font-size: 0.875rem;
+      padding: 20px 0;
+      vertical-align: top;
+      color: var(--mid);
+    }
+    .products-table td:first-child { color: var(--black); font-weight: 500; }
+    .products-table td:not(:first-child) { padding-left: 24px; }
+    .pt-status {
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── Raise block ── */
+    .raise-amount {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .raise-type {
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      margin-bottom: 40px;
+    }
+
+    /* ── Use of funds ── */
+    .funds-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 0.875rem;
+    }
+    .funds-item:first-child { border-top: 1px solid var(--rule); }
+    .funds-item .fi-label { color: var(--mid); }
+    .funds-item .fi-pct { color: var(--black); font-weight: 500; font-size: 0.95rem; }
+
+    /* ── Documents ── */
+    .doc-list { list-style: none; }
+    .doc-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .doc-item:first-child { border-top: 1px solid var(--rule); }
+    .di-name { font-size: 0.9rem; font-weight: 500; color: var(--black); }
+    .di-note { font-size: 0.78rem; color: var(--muted); margin-top: 3px; }
+
+    /* ── Disclaimer ── */
+    .disclaimer {
+      padding-top: 40px;
+      border-top: 1px solid var(--rule);
+    }
+    .disclaimer p {
+      font-size: 0.775rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 72ch;
+    }
+
+    @media (max-width: 720px) {
+      .two-col, .two-col-wide { grid-template-columns: 1fr; gap: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="wrap">
+      <a class="nav-brand" href="index.html">Malingue Inc.</a>
+      <ul class="nav-links">
+        <li><a href="ventures.html" class="hide-mobile">Products</a></li>
+        <li><a href="consulting.html" class="hide-mobile">Consulting</a></li>
+        <li><a href="investor-relations.html" aria-current="page">Investors</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="page-header">
+      <div class="wrap">
+        <span class="label">Investor Relations</span>
+        <h1>Built for the long game.</h1>
+        <p class="lead">
+          Malingue Inc. is raising a pre-seed round to accelerate development
+          of Godspeed and Addison. We are selective about who we bring in.
+        </p>
+      </div>
+    </div>
+
+    <!-- Company overview -->
+    <section class="ir-section">
+      <div class="wrap">
+        <span class="label" style="display:block; margin-bottom:32px;">Company overview</span>
+        <table class="data-table">
+          <tbody>
+            <tr>
+              <td class="key">Founded</td>
+              <td class="val">2024</td>
+            </tr>
+            <tr>
+              <td class="key">Founder</td>
+              <td class="val">Danielle Malingue-Essomo — CEO &amp; Product Lead</td>
+            </tr>
+            <tr>
+              <td class="key">Headquarters</td>
+              <td class="val">New York City, United States</td>
+            </tr>
+            <tr>
+              <td class="key">Stage</td>
+              <td class="val">Pre-Seed — Actively raising</td>
+            </tr>
+            <tr>
+              <td class="key">Focus</td>
+              <td class="val">Executive function software &amp; workflow AI</td>
+            </tr>
+            <tr>
+              <td class="key">Flagship products</td>
+              <td class="val">Godspeed, Addison</td>
+            </tr>
+            <tr>
+              <td class="key">Total ventures</td>
+              <td class="val">5 across technology, fintech, and creative sectors</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Product portfolio -->
+    <section class="ir-section">
+      <div class="wrap">
+        <span class="label" style="display:block; margin-bottom:32px;">Product portfolio</span>
+        <table class="products-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Description</th>
+              <th>Market</th>
+              <th>Stage</th>
+              <th>Revenue model</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Godspeed</td>
+              <td>Intelligent workflow execution platform for knowledge workers</td>
+              <td>Productivity &amp; workflow AI</td>
+              <td><span class="pt-status">Early Access</span></td>
+              <td>SaaS subscription</td>
+            </tr>
+            <tr>
+              <td>Addison</td>
+              <td>Executive-function toolkit built for adults with ADHD</td>
+              <td>Mental wellness &amp; productivity</td>
+              <td><span class="pt-status">In Development</span></td>
+              <td>Freemium + premium</td>
+            </tr>
+            <tr>
+              <td>Gigi</td>
+              <td>Personal dating CRM with masked numbers and milestone tracking</td>
+              <td>Dating &amp; social tools</td>
+              <td><span class="pt-status">Prototype</span></td>
+              <td>Subscription + usage</td>
+            </tr>
+            <tr>
+              <td>LoanBall</td>
+              <td>Financial literacy game — learning interest and risk by feel</td>
+              <td>EdTech &amp; fintech gaming</td>
+              <td><span class="pt-status">In Build</span></td>
+              <td>IAP + free tier</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Current raise -->
+    <section class="ir-section">
+      <div class="wrap">
+        <span class="label" style="display:block; margin-bottom:40px;">Current raise</span>
+        <div class="two-col">
+          <div>
+            <div class="raise-amount">$500K</div>
+            <div class="raise-type">Pre-Seed &nbsp;·&nbsp; SAFE or Convertible Note</div>
+            <table class="data-table">
+              <tbody>
+                <tr>
+                  <td class="key">Instrument</td>
+                  <td class="val">SAFE / Convertible Note</td>
+                </tr>
+                <tr>
+                  <td class="key">Minimum check</td>
+                  <td class="val">$25,000</td>
+                </tr>
+                <tr>
+                  <td class="key">Round status</td>
+                  <td class="val">Open — actively raising</td>
+                </tr>
+                <tr>
+                  <td class="key">Use of proceeds</td>
+                  <td class="val">Product development &amp; go-to-market</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <p style="font-size:0.78rem; color:var(--muted); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:8px;">Use of funds</p>
+            <div class="funds-item">
+              <span class="fi-label">Product development &amp; engineering</span>
+              <span class="fi-pct">45%</span>
+            </div>
+            <div class="funds-item">
+              <span class="fi-label">Go-to-market &amp; growth</span>
+              <span class="fi-pct">25%</span>
+            </div>
+            <div class="funds-item">
+              <span class="fi-label">Operations &amp; legal</span>
+              <span class="fi-pct">15%</span>
+            </div>
+            <div class="funds-item">
+              <span class="fi-label">Team &amp; hiring</span>
+              <span class="fi-pct">10%</span>
+            </div>
+            <div class="funds-item">
+              <span class="fi-label">Reserve</span>
+              <span class="fi-pct">5%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thesis -->
+    <section class="ir-section">
+      <div class="wrap">
+        <span class="label" style="display:block; margin-bottom:40px;">Investment thesis</span>
+        <div class="two-col-wide">
+          <div>
+            <h2 class="ir-headline">Why this, why now.</h2>
+            <p class="ir-body">
+              Executive dysfunction costs the global workforce hundreds of billions annually
+              in lost productivity. ADHD affects over 15 million US adults — yet virtually
+              no software has been built with their cognition in mind.
+            </p>
+            <p class="ir-body">
+              Malingue Inc. takes a behavior-science-first approach. We do not layer AI on
+              top of an existing paradigm. We design from the ground up around how people
+              actually think, prioritize, and move — and build tools precise enough to matter.
+            </p>
+            <p class="ir-body">
+              Our two flagship products address adjacent moments in the same user journey:
+              Godspeed for professionals who need execution speed; Addison for individuals
+              who need structure and cognitive support. Together they anchor a platform
+              thesis around human performance at work.
+            </p>
+          </div>
+          <div>
+            <table class="data-table">
+              <tbody>
+                <tr>
+                  <td class="key">Market</td>
+                  <td class="val" style="font-size:0.875rem;">Global productivity software projected at $96B+ by 2025. Mental wellness apps growing at 16% CAGR.</td>
+                </tr>
+                <tr>
+                  <td class="key">TAM — ADHD</td>
+                  <td class="val" style="font-size:0.875rem;">15M+ diagnosed adults in the US. Underserved by existing tools.</td>
+                </tr>
+                <tr>
+                  <td class="key">Differentiation</td>
+                  <td class="val" style="font-size:0.875rem;">Behavior-science foundation drives meaningfully higher engagement and retention.</td>
+                </tr>
+                <tr>
+                  <td class="key">Founder</td>
+                  <td class="val" style="font-size:0.875rem;">Full-stack capability: product design, brand, and engineering under one roof.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documents -->
+    <section class="ir-section">
+      <div class="wrap">
+        <span class="label" style="display:block; margin-bottom:32px;">Documents &amp; materials</span>
+        <ul class="doc-list">
+          <li class="doc-item">
+            <div>
+              <div class="di-name">Pitch Deck</div>
+              <div class="di-note">Full investor presentation</div>
+            </div>
+            <a class="arrow-link" href="mailto:hello@malingueinc.com?subject=Pitch%20Deck%20Request">Request</a>
+          </li>
+          <li class="doc-item">
+            <div>
+              <div class="di-name">One-Pager</div>
+              <div class="di-note">Company summary — single page</div>
+            </div>
+            <a class="arrow-link" href="mailto:hello@malingueinc.com?subject=One-Pager%20Request">Request</a>
+          </li>
+          <li class="doc-item">
+            <div>
+              <div class="di-name">Financial Model</div>
+              <div class="di-note">18-month projections — NDA required</div>
+            </div>
+            <a class="arrow-link" href="mailto:hello@malingueinc.com?subject=Financial%20Model%20Request">Request</a>
+          </li>
+          <li class="doc-item">
+            <div>
+              <div class="di-name">Product Demo</div>
+              <div class="di-note">Live walkthrough with founder</div>
+            </div>
+            <a class="arrow-link" href="mailto:hello@malingueinc.com?subject=Product%20Demo%20Request">Request</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="ir-section">
+      <div class="wrap">
+        <div class="two-col">
+          <div>
+            <span class="label" style="display:block; margin-bottom:24px;">Investor contact</span>
+            <h2 class="ir-headline">Reach out directly.</h2>
+            <p class="ir-body">
+              We respond to all serious inquiries within 48 hours.
+              Tell us who you are and what you are looking to do.
+            </p>
+            <a class="arrow-link" href="mailto:hello@malingueinc.com?subject=Investor%20Inquiry">hello@malingueinc.com</a>
+          </div>
+          <div class="disclaimer">
+            <p>
+              This page contains forward-looking statements and market estimates based on
+              current expectations and publicly available research. All investment
+              involves risk. This does not constitute an offer to sell or solicitation
+              to buy securities. Consult your financial advisor before making investment
+              decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="footer-brand">Malingue Inc.</span>
+      <ul class="footer-links">
+        <li><a href="ventures.html">Products</a></li>
+        <li><a href="consulting.html">Consulting</a></li>
+        <li><a href="investor-relations.html">Investors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <span class="footer-copy">&copy; 2025 Malingue Inc.</span>
+    </div>
+  </footer>
+
+</body>
+</html>

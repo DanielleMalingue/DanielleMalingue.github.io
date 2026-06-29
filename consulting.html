@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consulting — Malingue Inc.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .services-list { padding: 0 0 80px; }
+    .service-row {
+      display: grid;
+      grid-template-columns: 220px 1fr 160px;
+      gap: 40px;
+      padding: 40px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
+    }
+    .service-row:first-child { border-top: 1px solid var(--rule); }
+    .sr-name {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--black);
+    }
+    .sr-duration { font-size: 0.75rem; color: var(--muted); margin-top: 4px; letter-spacing: 0.04em; }
+    .sr-desc { font-size: 0.875rem; color: var(--mid); line-height: 1.75; }
+    .sr-detail-list { list-style: none; margin-top: 12px; }
+    .sr-detail-list li {
+      font-size: 0.825rem;
+      color: var(--muted);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .sr-detail-list li:first-child { border-top: 1px solid var(--rule); }
+    .sr-price {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--black);
+      line-height: 1;
+    }
+    .sr-price-note { font-size: 0.72rem; color: var(--muted); margin-top: 6px; letter-spacing: 0.04em; }
+
+    .process-section { padding: 0 0 80px; }
+    .process-row {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 32px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
+    }
+    .process-row:first-child { border-top: 1px solid var(--rule); }
+    .pr-num {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-transform: uppercase;
+      padding-top: 2px;
+    }
+    .pr-title { font-size: 0.95rem; font-weight: 500; margin-bottom: 4px; }
+    .pr-desc { font-size: 0.85rem; color: var(--mid); line-height: 1.65; }
+
+    .cta-section {
+      padding: 72px 0;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+    }
+    .cta-section p { font-size: 0.9rem; color: var(--mid); max-width: 44ch; line-height: 1.75; }
+    .cta-links { display: flex; gap: 24px; align-items: center; flex-shrink: 0; }
+
+    @media (max-width: 720px) {
+      .service-row { grid-template-columns: 1fr; gap: 16px; }
+      .sr-price { margin-top: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="wrap">
+      <a class="nav-brand" href="index.html">Malingue Inc.</a>
+      <ul class="nav-links">
+        <li><a href="ventures.html" class="hide-mobile">Products</a></li>
+        <li><a href="consulting.html" aria-current="page">Consulting</a></li>
+        <li><a href="investor-relations.html">Investors</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <div class="page-header">
+      <div class="wrap">
+        <span class="label">Consulting</span>
+        <h1>Strategy-first design and build.</h1>
+        <p class="lead">
+          We work with founders who are serious. From product strategy to launch —
+          using the same approach we apply to our own products.
+        </p>
+      </div>
+    </div>
+
+    <section class="services-list">
+      <div class="wrap">
+        <span class="section-label">Engagements</span>
+
+        <div class="service-row">
+          <div>
+            <div class="sr-name">Product Strategy Sprint</div>
+            <div class="sr-duration">1–2 weeks</div>
+          </div>
+          <div>
+            <p class="sr-desc">Turn a fuzzy idea into a sharp product thesis with user stories and a de-risked MVP plan. Includes competitive positioning and a clickable prototype.</p>
+            <ul class="sr-detail-list">
+              <li>North-star metrics and success definition</li>
+              <li>Competitive and positioning snapshot</li>
+              <li>Clickable low-fidelity prototype</li>
+            </ul>
+          </div>
+          <div>
+            <div class="sr-price">$3,500</div>
+            <div class="sr-price-note">Fixed scope</div>
+            <a class="arrow-link" href="mailto:hello@malingueinc.com?subject=Starter%20Sprint" style="margin-top:16px; display:inline-flex; font-size:0.8rem;">Book sprint</a>
+          </div>
+        </div>
+
+        <div class="service-row">
+          <div>
+            <div class="sr-name">Brand &amp; Interface Design</div>
+            <div class="sr-duration">2–4 weeks</div>
+          </div>
+          <div>
+            <p class="sr-desc">Design systems that scale. Identity, UI kit, and key flows that feel obvious to use. Delivered as a handoff-ready Figma library.</p>
+            <ul class="sr-detail-list">
+              <li>Tokenized styles and component library</li>
+              <li>Hero pages and core app screens</li>
+              <li>Handoff-ready Figma deliverable</li>
+            </ul>
+          </div>
+          <div>
+            <div class="sr-price">Custom</div>
+            <div class="sr-price-note">Scope-based</div>
+            <a class="arrow-link" href="mailto:hello@malingueinc.com?subject=Brand%20and%20Interface" style="margin-top:16px; display:inline-flex; font-size:0.8rem;">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="service-row">
+          <div>
+            <div class="sr-name">Build &amp; Launch</div>
+            <div class="sr-duration">3–6 weeks</div>
+          </div>
+          <div>
+            <p class="sr-desc">Ship a lean MVP. No bloat, no ceremony — just momentum. We use the right stack for the problem and instrument everything for learning.</p>
+            <ul class="sr-detail-list">
+              <li>Functional MVP or landing page + waitlist</li>
+              <li>Analytics and lightweight A/B experiments</li>
+              <li>Founder playbook for what comes next</li>
+            </ul>
+          </div>
+          <div>
+            <div class="sr-price">$6.5–12.5K</div>
+            <div class="sr-price-note">Scope-based</div>
+            <a class="arrow-link" href="mailto:hello@malingueinc.com?subject=Build%20and%20Launch" style="margin-top:16px; display:inline-flex; font-size:0.8rem;">Scope project</a>
+          </div>
+        </div>
+
+        <div class="service-row">
+          <div>
+            <div class="sr-name">Advisory</div>
+            <div class="sr-duration">Ongoing</div>
+          </div>
+          <div>
+            <p class="sr-desc">Two strategy calls per month, async reviews, and introductions when relevant. For founders who want a sharp, senior eye on the work.</p>
+            <ul class="sr-detail-list">
+              <li>2 strategy calls per month</li>
+              <li>Asynchronous design and strategy reviews</li>
+              <li>Warm introductions when relevant</li>
+            </ul>
+          </div>
+          <div>
+            <div class="sr-price">$1,300</div>
+            <div class="sr-price-note">Per month or equity</div>
+            <a class="arrow-link" href="mailto:hello@malingueinc.com?subject=Advisory" style="margin-top:16px; display:inline-flex; font-size:0.8rem;">Start advisory</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section">
+      <div class="wrap">
+        <span class="section-label">Process</span>
+        <div class="process-row">
+          <span class="pr-num">01</span>
+          <div><div class="pr-title">Discover</div><p class="pr-desc">Light research. Goals, constraints, and the "why now."</p></div>
+        </div>
+        <div class="process-row">
+          <span class="pr-num">02</span>
+          <div><div class="pr-title">Define</div><p class="pr-desc">Users, jobs-to-be-done, success metrics, and scope.</p></div>
+        </div>
+        <div class="process-row">
+          <span class="pr-num">03</span>
+          <div><div class="pr-title">Design</div><p class="pr-desc">Low-fi to high-fi flows, design system, and content.</p></div>
+        </div>
+        <div class="process-row">
+          <span class="pr-num">04</span>
+          <div><div class="pr-title">Build</div><p class="pr-desc">Lean stack, instrumented for learning. Ship fast.</p></div>
+        </div>
+        <div class="process-row">
+          <span class="pr-num">05</span>
+          <div><div class="pr-title">Launch</div><p class="pr-desc">Tracking, feedback loops, and next-step roadmap.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="cta-section">
+        <div>
+          <h2>Have something worth building?</h2>
+          <p>Send a few lines about your idea, audience, and timeline. We reply with next steps within 48 hours.</p>
+        </div>
+        <div class="cta-links">
+          <a class="arrow-link" href="mailto:hello@malingueinc.com?subject=Project%20Inquiry">Start a project</a>
+          <a class="text-link" href="mailto:hello@malingueinc.com?subject=Intro%20Call">Book intro call</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="footer-brand">Malingue Inc.</span>
+      <ul class="footer-links">
+        <li><a href="ventures.html">Products</a></li>
+        <li><a href="consulting.html">Consulting</a></li>
+        <li><a href="investor-relations.html">Investors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <span class="footer-copy">&copy; 2025 Malingue Inc.</span>
+    </div>
+  </footer>
+
+</body>
+</html>

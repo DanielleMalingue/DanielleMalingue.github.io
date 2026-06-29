@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Malingue Inc.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-body { padding: 0 0 88px; }
+    .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 96px; align-items: start; padding-top: 64px; border-top: 1px solid var(--rule); }
+    .about-copy p { font-size: 0.95rem; color: var(--mid); line-height: 1.85; margin-bottom: 20px; }
+    .about-copy h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin: 40px 0 14px; letter-spacing: -0.01em; }
+    .side-data { list-style: none; }
+    .side-data li { display: flex; flex-direction: column; padding: 18px 0; border-bottom: 1px solid var(--rule); }
+    .side-data li:first-child { border-top: 1px solid var(--rule); }
+    .sd-key { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+    .sd-val { font-size: 0.875rem; color: var(--black); line-height: 1.5; }
+    @media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; gap: 48px; } }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="nav-brand" href="index.html">Malingue Inc.</a>
+      <ul class="nav-links">
+        <li><a href="ventures.html" class="hide-mobile">Products</a></li>
+        <li><a href="consulting.html" class="hide-mobile">Consulting</a></li>
+        <li><a href="investor-relations.html">Investors</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <div class="page-header">
+      <div class="wrap">
+        <span class="label">About</span>
+        <h1>Malingue Inc.</h1>
+        <p class="lead">A technology and design company operating at the intersection of behavior science, product engineering, and human cognition.</p>
+      </div>
+    </div>
+    <section class="about-body">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>Malingue Inc. was founded on a single conviction: the tools most people use every day were not built with them in mind. Executive dysfunction, cognitive load, and poorly designed workflows cost people time, energy, and opportunity at a scale the industry has largely ignored.</p>
+            <p>We build from first principles. Before a single screen is designed, we understand how the brain works under pressure, how decisions are made, and where friction lives. Then we remove it.</p>
+            <h2>Our flagship products</h2>
+            <p>Godspeed is an intelligent execution platform for professionals who cannot afford to lose momentum. Addison is an executive-function toolkit built from the ground up for people with ADHD — designed around how their brains actually work, not against it.</p>
+            <p>Beyond our core products, we maintain a portfolio of early-stage ventures across fintech, social tools, and creative technology through Malingue Labs.</p>
+            <h2>How we work</h2>
+            <p>We are lean, deliberate, and fast. We believe the best products come from staying close to the problem — shipping early, learning from real people, and designing with intention. We apply this same discipline to the services we offer founders and teams who want to build with the same rigor.</p>
+          </div>
+          <ul class="side-data">
+            <li><span class="sd-key">Founder</span><span class="sd-val">Danielle Malingue-Essomo<br />CEO &amp; Product Lead</span></li>
+            <li><span class="sd-key">Founded</span><span class="sd-val">2024</span></li>
+            <li><span class="sd-key">Headquarters</span><span class="sd-val">New York City</span></li>
+            <li><span class="sd-key">Stage</span><span class="sd-val">Pre-Seed — Actively raising</span></li>
+            <li><span class="sd-key">Contact</span><span class="sd-val"><a href="mailto:hello@malingueinc.com" class="arrow-link" style="font-size:0.875rem;">hello@malingueinc.com</a></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="footer-brand">Malingue Inc.</span>
+      <ul class="footer-links">
+        <li><a href="ventures.html">Products</a></li>
+        <li><a href="consulting.html">Consulting</a></li>
+        <li><a href="investor-relations.html">Investors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <span class="footer-copy">&copy; 2025 Malingue Inc.</span>
+    </div>
+  </footer>
+</body>
+</html>
